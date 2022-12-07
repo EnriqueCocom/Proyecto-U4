@@ -1,0 +1,52 @@
+@import url(estilo.css);
+
+.titulo h2{
+  text-align: center;
+  color: var(--rojo);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+input {
+  border-radius: 5px;
+  border: 1px #999 solid;
+  padding: 10px;
+  margin-bottom: 10px;
+  width: 50%;
+  font-family: "Montserrat", sans-serif;
+}
+textarea {
+  border-radius: 5px;
+  border: 1px #999 solid;
+  padding: 10px;
+  margin-bottom: 10px;
+  width: 50%;
+  min-height: 200px;
+  resize: none;
+  font-family: "Montserrat", sans-serif;
+}
+
+.btn_send{
+  width: 150px;
+  padding: 15px;
+  margin-top: 50px;
+  margin:auto;
+  color: #ffffff;
+  text-align: center;
+  text-decoration:none;
+  background-color: var(--rojo);
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.btn_send:hover{
+  color: #ffffff;
+  background-color: #ff7300;
+  
+}
