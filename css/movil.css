@@ -29,6 +29,12 @@
     align-items: center;
     width: 100%;
   }
+  .seccion2{
+    display: none;
+  }
+  .seccion2-feautures{
+    display: none;
+  }
   .logo {
     display: flex;
     flex-direction: row;
