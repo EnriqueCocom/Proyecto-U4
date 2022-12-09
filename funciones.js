@@ -20,6 +20,11 @@ $(".btn_ancla").click(function () {
 });
 
 //Funciones de Javascript Para hacer el Slide_Fotos
+
+$(function() {
+  $(".rslides").responsiveSlides();
+});
+
 $(function () {
   $("#slider4").responsiveSlides({
     auto: false,
@@ -42,26 +47,25 @@ $(document).ready(function () {
 });
 
 //FUNCION DEL MODAL
-// var fondomodal = document.getElementById("modal");
-// var btn = document.getElementById("Btn");
-// var cerrar = document.getElementById("cerrarbtn");
+var mostrarmodal = document.getElementById("modal") ;
+var cerrarmodal = document.getElementById("cerrarbtn");
+var btnejecutar = document.getElementById("Btn");
 
-/*  function tiempo() {
-  fondomodal.style.display = "block";
+
+btnejecutar.onclick = function(){
+  mostrarmodal.style.display = "block";
 }
-setTimeout(tiempo, 5000); */
-// btn.onclick = function () {
-//   fondomodal.style.display = "block";
-// };
-// cerrar.onclick = function () {
-//   fondomodal.style.display = "none";
-// };
 
-// window.onclick = function (event) {
-//   if (event.target == fondomodal) {
-//     fondomodal.style.display = "none";
-//   }
-// };
+cerrarmodal.onclick = function(){
+  mostrarmodal.style.display = "none";
+}
+
+window.onclick = function (event) {
+  if (event.target == mostrarmodal) {
+    mostrarmodal.style.display = "none";
+  }
+};
+
 
 //FUNCION DEL ACORDEON
 //Acordeon 2

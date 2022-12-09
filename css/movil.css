@@ -101,6 +101,21 @@
     left: 0;
     top: 0;
   }
+  .btn_rojo2 {
+    padding: 10px 10px;
+  }
+  .fondomodal .contenidomodal {
+    width: 95%;
+  }
+  .video {
+    width:390px;
+    /* border: 1px blue solid; */
+    margin: auto;
+  }
+
+
+
+
 
   /* codigo carrousel */
   #slider1 {

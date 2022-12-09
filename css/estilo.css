@@ -128,8 +128,6 @@ body {
   right: 0;
 }
 
-
-
 /* Código de galeria de fotos */
 
 #galeria {
@@ -156,9 +154,10 @@ body {
   clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
 }
 
-.titulo3{
+.titulo3 {
   text-align: center;
 }
+
 /* Código informacion del slide*/
 .infoslide {
   height: 500px;
@@ -167,19 +166,16 @@ body {
   justify-content: center;
   align-items: center;
   position: absolute;
-  z-index: 1000000;
+  z-index: 9;
   top: 0;
   left: -5%;
   right: 0;
   color: white;
   width: 50%;
   font-family: "Poppins", sans-serif;
-  /* border: 1px red solid; */
   margin: 25px;
 }
-.infoslide span {
-  color: #ffe600;
-}
+
 .infoslide .titulo1 {
   color: white;
   font-weight: 700;
@@ -214,6 +210,43 @@ body {
   box-shadow: none;
 }
 
+.contenedorbotones {
+  padding-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.btn_play {
+  display: inline-block;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-weight: 400;
+  padding: 0;
+  background-color: #b30000;
+  box-shadow: 0px 0px 5px #ccc;
+  transition: all 0.5s ease;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: scale(1);
+  transition: all 0.5s;
+}
+.btn_play:hover {
+  background-color: #ff0000;
+  border: 1px #ff0000 solid;
+  transform: scale(1.5);
+}
+.contenedorbotones i {
+  font-size: 30px;
+  color: white;
+}
+
 .circulo2 {
   width: 700px;
   height: 600px;
@@ -224,13 +257,77 @@ body {
   background-color: #c2021cdc;
   transition: all 0.5s ease;
   position: absolute;
-  z-index: 10000;
-  top: 10;
+  /* Posición del circulo */
+  z-index: 5;
+  top: 0;
   left: -20%;
   right: 500%;
 }
 
-/* Codigo seccion seguro */
+/* Código del modal */
+.fondomodal {
+  display: none;
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  /* overflow: auto; */
+  transition: all 0.5s;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.contenidomodal {
+  background-color: #fefefe;
+  margin: 70px auto;
+  padding: 10px;
+  border: 1px solid #888;
+  width: 35%;
+  position: relative;
+}
+.estructuramodal {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.estructuramodal h1{
+  color: var(--rojo);
+}
+
+.rojo2 {
+  color: rgb(255, 0, 0);
+  font-size: 35px;
+  cursor: pointer;
+  margin-left: 300px;
+  margin-bottom: 10px;
+}
+.video {
+  width:450px;
+  /* border: 1px blue solid; */
+  margin: auto;
+}
+.video iframe{
+  width: 100%;
+  height: 100%;
+}
+#contenedoryoutube {
+  height: 0;
+  overflow: hidden;
+  padding-bottom: 56.25%; /*nos da la proporcion de 16X9*/
+  position: relative;
+}
+#contenedoryoutube iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
+
+
+/* Código secci´ón seguro */
 .seguros {
   padding: 30px 0px;
   margin: auto;
@@ -296,6 +393,7 @@ body {
   font-size: 20px;
 }
 
+/* Código seccion de servicios */
 .parrafo {
   margin: 11px;
   justify-content: center;
@@ -323,7 +421,6 @@ body {
   box-shadow: none;
   left: -100%;
 }
-
 
 /* Codigo seccion 2*/
 /*Seccion2 Partes de en medio Grid*/
@@ -409,9 +506,6 @@ body {
   font-family: var(--tipograpoppins);
 }
 
-
-
-
 /* Codigo sección camara*/
 .info_abajo {
   display: flex;
@@ -435,7 +529,7 @@ body {
   display: flex;
   width: 380;
 }
-.cont_adentro i{
+.cont_adentro i {
   color: var(--negro);
 }
 .foto {
@@ -452,8 +546,7 @@ body {
   color: white;
 }
 
-.cont_int h5
-{
+.cont_int h5 {
   color: white;
 }
 .cont_rojo {
@@ -578,7 +671,6 @@ body {
 .estrellas i {
   color: #ffe600;
   font-size: 16px;
-
 }
 .cards {
   box-shadow: 0px 0px 10px #ccc;
@@ -699,19 +791,23 @@ body {
   text-align: center;
 }
 /* Código del video */
-
-#contenedor_video {
+.caja_video{
+  max-width: 900px;
+  /* border: 2px blueviolet solid; */
+  margin: 0 auto;
+}
+#contenedor_video{
   height: 0;
   overflow: hidden;
-  padding-bottom: 40%;
+  padding-bottom: 56.25%;
   position: relative;
 }
-#contenedor_video iframe {
+#contenedor_video iframe{
   position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
+  top: 0;
+  left: 0;
 }
 
 /* Código parallax*/
